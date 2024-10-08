@@ -1,0 +1,356 @@
+@font-face {
+    font-family: font-pirate;
+    src: url(fonts/TheRumIsGone-Wy1nG.ttf);
+}
+
+@font-face {
+    font-family: font-regular;
+    src: url(fonts/Sanchez-Regular.ttf);
+}
+
+html,
+body {
+    margin: 0;
+    overflow-x: hidden;
+    color: #F4f2f3;
+    display: flex;
+    flex-direction: column;
+    background-color: #151515;
+    font-family: font-regular;
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+
+    /* position: relative; */
+}
+
+
+/* ---------------------------CONTIANERS--------------------------- */
+.container {
+    height: 70vh;
+    width: 80vw;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    /* background-color: lightblue; */
+}
+
+.container-large {
+    height: 100vh;
+    width: 90vw;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+
+    font-family: font-regular;
+    /* background-color: lightblue; */
+}
+
+.reverse-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    font-family: font-regular;
+
+}
+
+.inner-half-container {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: font-regular;
+
+}
+
+.about-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    /* background-color: lightblue; */
+}
+
+.text-container {
+    font-size: 24px;
+    padding: 0px 10px 0px 20px;
+
+}
+/* ---------------------------------------------------------------- */
+
+
+/* -------------------------------------HEADER--------------------------------------------------------------- */
+.header {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: font-pirate;
+    background-color: #F4f2f3;
+    /* border: solid red 1px; */
+}
+
+.inner-header {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.header-logo {
+    height: 100%;
+    width: 50%;
+
+}
+
+.logo a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #151515;
+}
+
+.header-nav {
+    height: 100%;
+    width: 50%;
+}
+
+.nav-ul {
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.nav-ul li {
+    float: left;
+    /* background-color: #F3F3F4; */
+}
+
+.nav-li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+
+    transition: ease-out 0.5s;
+}
+
+.nav-ul li a:hover {
+    background-color: lightblue;
+}
+
+/* ------------------------------------------------------------- */
+/* ------------------------LANDING--------------------------------- */
+
+.hero-img {
+    height: 70%;
+    width: 80%;
+}
+
+/* --------------------- */
+
+.about {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #151515;
+
+    background-color: #F4f2f3;
+
+}
+
+.about-img {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about-img img {
+    border: solid black 1px;
+    border-radius: 4px;
+}
+
+.about-txt {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-txt p {
+    font-size: 24px;
+    padding: 20px;
+}
+
+.btn-container {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+}
+
+.btn-container a{
+    color: #151515;
+    text-decoration: none;
+}
+
+button {
+    height: 50px;
+    width: 200px;
+    /* margin-right: 20px; */
+    border: none;
+    border-radius: 4px;
+
+    background-color: rgb(113, 201, 230);
+    transition: ease-out 0.5s;
+}
+
+button:hover {
+    background-color: lightblue;
+    
+}
+
+/* ---------------------image slider--------------------------- */
+
+
+* {
+    box-sizing: border-box;
+}
+
+.slide-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.slide-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+}
+
+.arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev,
+.next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.text-container h2 {
+    color: #F4f2f3;
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------contact---------------- */
+.contact-container {
+    background: #F4f2f3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50vw;
+    max-width: 600px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    color: #151515;
+  }
+
+  .contact-info {
+    margin-bottom: 20px;
+    color: #151515;
+  }
+
+  .contact-info p {
+    margin: 5px 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  input, textarea {
+    margin-bottom: 15px;
+    border: solid black 1px;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+.contact {
+    height: 90vh;
+    width: 100%;
+    background-color: #F4f2f3;
+  }
+
+
